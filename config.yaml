@@ -1,7 +1,6 @@
 # Clash Verge 配置 - dynfree.proxy.dev
 # 代理来源: proxy.scdn.io (GitHub Actions 每 6 小时更新)
-# 每个 HTTP 代理节点携带 Host: tls-desktop.dingtalk.com 绕过公司防火墙 (domain fronting)
-# 健康检查目标: https://wx.qq.com/
+# 健康检查目标: https://www.gstatic.com/generate_204
 
 mixed-port: 7890
 allow-lan: false
@@ -46,11 +45,11 @@ proxy-providers:
     proxy: 代理选择
     health-check:
       enable: true
-      url: https://wx.qq.com/
+      url: https://www.gstatic.com/generate_204
       interval: 300
       timeout: 5000
       lazy: true
-      expected-status: 200
+      expected-status: 204
 
 # 代理组
 proxy-groups:
@@ -58,11 +57,11 @@ proxy-groups:
     type: url-test
     use:
       - proxy-pool
-    url: https://wx.qq.com/
+    url: https://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     timeout: 5000
-    expected-status: 200
+    expected-status: 204
 
   - name: "手动选择"
     type: select

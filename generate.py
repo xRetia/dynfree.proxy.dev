@@ -6,9 +6,6 @@ dynfree.proxy.dev - 从 proxy.scdn.io 拉取免费 HTTP 代理并生成 Clash/mi
   proxies.yaml  代理节点列表（proxy-providers content 格式，CI 每 6 小时自动刷新）
   config.yaml   Clash Verge 主配置（静态文件，仅初始或改模板时手动生成）
 
-每个代理节点携带 Host: tls-desktop.dingtalk.com（domain fronting），
-用于绕过仅放行钉钉域名的公司防火墙。
-
 用法:
   python generate.py            # 拉取代理，刷新 proxies.yaml（CI 使用）
   python generate.py --config   # 同时重新生成 config.yaml（改模板后手动执行）
@@ -27,8 +24,6 @@ API_URL = "https://proxy.scdn.io/api/get_proxy.php"
 TOTAL_COUNT = 30    # 每次拉取的代理总数
 PER_REQUEST = 15    # API 单次上限 20，分两批
 MAX_RETRY = 3       # 单批拉取重试次数
-PROXY_HOST = "tls-desktop.dingtalk.com"
-
 REPO = "xRetia/dynfree.proxy.dev"
 DEFAULT_PROVIDER_URL = f"https://raw.githubusercontent.com/{REPO}/main/proxies.yaml"
 
@@ -80,8 +75,6 @@ def build_proxies_yaml(nodes):
         lines.append("    type: http")
         lines.append(f"    server: {server}")
         lines.append(f"    port: {port}")
-        lines.append("    headers:")
-        lines.append(f"      Host: {PROXY_HOST}")
     return "\n".join(lines) + "\n"
 
 
@@ -90,8 +83,7 @@ def build_config_yaml(provider_url):
     return f"""\
 # Clash Verge 配置 - dynfree.proxy.dev
 # 代理来源: proxy.scdn.io (GitHub Actions 每 6 小时更新)
-# 每个 HTTP 代理节点携带 Host: {PROXY_HOST} 绕过公司防火墙 (domain fronting)
-# 健康检查目标: https://wx.qq.com/
+# 健康检查目标: https://www.gstatic.com/generate_204
 
 mixed-port: 7890
 allow-lan: false
@@ -136,11 +128,11 @@ proxy-providers:
     proxy: 代理选择
     health-check:
       enable: true
-      url: https://wx.qq.com/
+      url: https://www.gstatic.com/generate_204
       interval: 300
       timeout: 5000
       lazy: true
-      expected-status: 200
+      expected-status: 204
 
 # 代理组
 proxy-groups:
@@ -148,11 +140,11 @@ proxy-groups:
     type: url-test
     use:
       - proxy-pool
-    url: https://wx.qq.com/
+    url: https://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     timeout: 5000
-    expected-status: 200
+    expected-status: 204
 
   - name: "手动选择"
     type: select
@@ -195,7 +187,7 @@ def main():
             seen.add(addr)
             nodes.append(parse_proxy(addr))
 
-    print(f"\n总计可用代理 {len(nodes)} 个 (Host: {PROXY_HOST})")
+    print(f"\n总计可用代理 {len(nodes)} 个")
     if not nodes:
         print("ERROR: 未拉取到任何代理", file=sys.stderr)
         sys.exit(1)

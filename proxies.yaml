@@ -1,181 +1,121 @@
 proxies:
-  - name: "45.174.248.20:999"
+  - name: "39.104.59.56:8081"
     type: http
-    server: 45.174.248.20
-    port: 999
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "165.225.66.38:10000"
+    server: 39.104.59.56
+    port: 8081
+  - name: "39.102.209.128:8008"
     type: http
-    server: 165.225.66.38
-    port: 10000
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "147.161.246.37:10006"
+    server: 39.102.209.128
+    port: 8008
+  - name: "213.169.33.7:8001"
     type: http
-    server: 147.161.246.37
-    port: 10006
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "165.225.66.38:12752"
+    server: 213.169.33.7
+    port: 8001
+  - name: "47.90.149.238:6379"
     type: http
-    server: 165.225.66.38
-    port: 12752
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "165.225.66.38:11502"
+    server: 47.90.149.238
+    port: 6379
+  - name: "39.104.27.89:8888"
     type: http
-    server: 165.225.66.38
-    port: 11502
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "34.207.239.230:1506"
+    server: 39.104.27.89
+    port: 8888
+  - name: "47.91.121.127:8081"
     type: http
-    server: 34.207.239.230
-    port: 1506
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "103.155.167.62:8080"
+    server: 47.91.121.127
+    port: 8081
+  - name: "39.104.69.76:8081"
     type: http
-    server: 103.155.167.62
+    server: 39.104.69.76
+    port: 8081
+  - name: "101.109.119.24:8080"
+    type: http
+    server: 101.109.119.24
     port: 8080
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "38.191.210.101:999"
+  - name: "123.200.7.110:8080"
     type: http
-    server: 38.191.210.101
-    port: 999
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "45.170.131.218:999"
-    type: http
-    server: 45.170.131.218
-    port: 999
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "103.56.80.39:3125"
-    type: http
-    server: 103.56.80.39
-    port: 3125
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "165.225.66.38:10919"
-    type: http
-    server: 165.225.66.38
-    port: 10919
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "165.225.66.38:10809"
-    type: http
-    server: 165.225.66.38
-    port: 10809
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "45.198.8.6:8080"
-    type: http
-    server: 45.198.8.6
+    server: 123.200.7.110
     port: 8080
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "51.17.154.141:8653"
+  - name: "36.95.245.7:8090"
     type: http
-    server: 51.17.154.141
-    port: 8653
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "54.180.117.151:6616"
-    type: http
-    server: 54.180.117.151
-    port: 6616
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "179.48.11.6:8085"
-    type: http
-    server: 179.48.11.6
-    port: 8085
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "45.250.215.8:8080"
-    type: http
-    server: 45.250.215.8
-    port: 8080
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "47.91.115.179:8443"
-    type: http
-    server: 47.91.115.179
-    port: 8443
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "190.93.189.142:999"
-    type: http
-    server: 190.93.189.142
-    port: 999
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "8.219.229.53:8080"
-    type: http
-    server: 8.219.229.53
-    port: 8080
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "47.237.92.86:5060"
-    type: http
-    server: 47.237.92.86
-    port: 5060
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "123.57.1.78:1081"
-    type: http
-    server: 123.57.1.78
-    port: 1081
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "8.213.197.208:8080"
-    type: http
-    server: 8.213.197.208
-    port: 8080
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "8.215.3.250:9797"
-    type: http
-    server: 8.215.3.250
-    port: 9797
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "8.212.168.170:9098"
-    type: http
-    server: 8.212.168.170
-    port: 9098
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "47.91.110.148:3128"
-    type: http
-    server: 47.91.110.148
-    port: 3128
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "79.106.229.115:8989"
-    type: http
-    server: 79.106.229.115
-    port: 8989
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "190.8.164.245:999"
-    type: http
-    server: 190.8.164.245
-    port: 999
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "8.220.141.8:4145"
+    server: 36.95.245.7
+    port: 8090
+  - name: "8.220.141.8:13"
     type: http
     server: 8.220.141.8
-    port: 4145
-    headers:
-      Host: tls-desktop.dingtalk.com
-  - name: "103.19.58.151:8080"
+    port: 13
+  - name: "47.238.134.126:8004"
     type: http
-    server: 103.19.58.151
+    server: 47.238.134.126
+    port: 8004
+  - name: "186.101.251.197:8080"
+    type: http
+    server: 186.101.251.197
     port: 8080
-    headers:
-      Host: tls-desktop.dingtalk.com
+  - name: "175.158.63.166:1111"
+    type: http
+    server: 175.158.63.166
+    port: 1111
+  - name: "167.249.29.218:999"
+    type: http
+    server: 167.249.29.218
+    port: 999
+  - name: "47.109.83.196:8088"
+    type: http
+    server: 47.109.83.196
+    port: 8088
+  - name: "47.120.0.231:1311"
+    type: http
+    server: 47.120.0.231
+    port: 1311
+  - name: "39.102.209.128:6379"
+    type: http
+    server: 39.102.209.128
+    port: 6379
+  - name: "39.104.23.154:1212"
+    type: http
+    server: 39.104.23.154
+    port: 1212
+  - name: "47.91.89.3:1111"
+    type: http
+    server: 47.91.89.3
+    port: 1111
+  - name: "8.211.195.139:8008"
+    type: http
+    server: 8.211.195.139
+    port: 8008
+  - name: "8.215.12.103:8445"
+    type: http
+    server: 8.215.12.103
+    port: 8445
+  - name: "119.13.111.169:18081"
+    type: http
+    server: 119.13.111.169
+    port: 18081
+  - name: "47.104.198.111:1234"
+    type: http
+    server: 47.104.198.111
+    port: 1234
+  - name: "121.43.109.88:9080"
+    type: http
+    server: 121.43.109.88
+    port: 9080
+  - name: "47.105.122.72:8000"
+    type: http
+    server: 47.105.122.72
+    port: 8000
+  - name: "8.221.141.88:5060"
+    type: http
+    server: 8.221.141.88
+    port: 5060
+  - name: "38.158.83.161:999"
+    type: http
+    server: 38.158.83.161
+    port: 999
+  - name: "47.107.142.198:50"
+    type: http
+    server: 47.107.142.198
+    port: 50
+  - name: "47.119.164.33:100"
+    type: http
+    server: 47.119.164.33
+    port: 100
