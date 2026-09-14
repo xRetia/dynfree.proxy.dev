@@ -1,0 +1,83 @@
+# Clash Verge 配置 - dynfree.proxy.dev
+# 代理来源: proxy.scdn.io (GitHub Actions 每 6 小时更新)
+# 每个 HTTP 代理节点携带 Host: tls-desktop.dingtalk.com 绕过公司防火墙 (domain fronting)
+# 健康检查目标: https://wx.qq.com/
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+unified-delay: true
+external-controller: 127.0.0.1:9090
+
+# 域名嗅探
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+
+# DNS: 系统_dns + 国内公共 UDP，公司内网环境下最稳
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - system
+    - 223.5.5.5
+    - 119.29.29.29
+
+# 代理集合 - 从 GitHub raw 拉取，每 6 小时自动刷新
+# proxy 字段: 通过代理组自身刷新订阅（防火墙环境下也能更新）
+proxy-providers:
+  proxy-pool:
+    type: http
+    url: "https://raw.githubusercontent.com/xRetia/dynfree.proxy.dev/main/proxies.yaml"
+    interval: 21600
+    proxy: 代理选择
+    health-check:
+      enable: true
+      url: https://wx.qq.com/
+      interval: 300
+      timeout: 5000
+      lazy: true
+      expected-status: 200
+
+# 代理组
+proxy-groups:
+  - name: "代理选择"
+    type: url-test
+    use:
+      - proxy-pool
+    url: https://wx.qq.com/
+    interval: 300
+    tolerance: 50
+    timeout: 5000
+    expected-status: 200
+
+  - name: "手动选择"
+    type: select
+    use:
+      - proxy-pool
+    proxies:
+      - DIRECT
+
+# 路由规则
+rules:
+  # 微信网页版走代理
+  - DOMAIN-SUFFIX,wx.qq.com,代理选择
+  - DOMAIN-SUFFIX,weixin.qq.com,代理选择
+  - DOMAIN-SUFFIX,qq.com,代理选择
+  # 钉钉相关域名直连（防火墙本身放行）
+  - DOMAIN-SUFFIX,dingtalk.com,DIRECT
+  # 其余直连
+  - MATCH,DIRECT
