@@ -2,8 +2,8 @@ name: Update Proxy Pool
 
 on:
   schedule:
-    # 每 6 小时更新一次代理池 (UTC)
-    - cron: '0 */6 * * *'
+    # 每天北京时间 08:00 / 14:00 / 20:00（UTC 00:00 / 06:00 / 12:00）
+    - cron: '0 0,6,12 * * *'
   workflow_dispatch:
   push:
     # 手动推 tag 触发构建（如 v1.0.0）
