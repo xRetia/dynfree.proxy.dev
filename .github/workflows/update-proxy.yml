@@ -6,6 +6,9 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch:
   push:
+    # 手动推 tag 触发构建（如 v1.0.0）
+    tags:
+      - 'v*'
     branches: [main]
     paths:
       - '.github/workflows/update-proxy.yml'
@@ -22,8 +25,10 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
+      - name: Checkout (始终检出 main，tag 触发时也把结果提交回 main)
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v5
