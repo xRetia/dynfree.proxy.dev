@@ -1,0 +1,56 @@
+name: Update Proxy Pool
+
+on:
+  schedule:
+    # 每 6 小时更新一次代理池 (UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-proxy.yml'
+      - 'generate.py'
+
+concurrency:
+  group: proxy-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 只刷新 proxies.yaml；config.yaml 为静态文件，不受 CI 覆盖
+      - name: Generate proxies
+        run: python generate.py
+
+      - name: Show summary
+        run: |
+          echo "=== proxies.yaml (头尾各 10 行) ==="
+          head -10 proxies.yaml
+          echo "  ..."
+          tail -10 proxies.yaml
+          echo ""
+          echo "节点总数: $(grep -c 'name:' proxies.yaml)"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add proxies.yaml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: refresh proxy pool [skip ci]"
+            git push
+          fi
