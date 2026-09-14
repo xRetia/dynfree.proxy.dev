@@ -1,121 +1,121 @@
 proxies:
-  - name: "39.104.59.56:8081"
+  - name: "47.116.210.163:9098"
     type: http
-    server: 39.104.59.56
-    port: 8081
-  - name: "39.102.209.128:8008"
+    server: 47.116.210.163
+    port: 9098
+  - name: "39.102.214.199:3129"
     type: http
-    server: 39.102.209.128
-    port: 8008
-  - name: "213.169.33.7:8001"
+    server: 39.102.214.199
+    port: 3129
+  - name: "47.91.110.148:8083"
     type: http
-    server: 213.169.33.7
-    port: 8001
-  - name: "47.90.149.238:6379"
+    server: 47.91.110.148
+    port: 8083
+  - name: "35.182.162.62:80"
     type: http
-    server: 47.90.149.238
-    port: 6379
-  - name: "39.104.27.89:8888"
+    server: 35.182.162.62
+    port: 80
+  - name: "39.102.213.187:9080"
     type: http
-    server: 39.104.27.89
-    port: 8888
-  - name: "47.91.121.127:8081"
-    type: http
-    server: 47.91.121.127
-    port: 8081
-  - name: "39.104.69.76:8081"
-    type: http
-    server: 39.104.69.76
-    port: 8081
-  - name: "101.109.119.24:8080"
-    type: http
-    server: 101.109.119.24
-    port: 8080
-  - name: "123.200.7.110:8080"
-    type: http
-    server: 123.200.7.110
-    port: 8080
-  - name: "36.95.245.7:8090"
-    type: http
-    server: 36.95.245.7
-    port: 8090
-  - name: "8.220.141.8:13"
-    type: http
-    server: 8.220.141.8
-    port: 13
-  - name: "47.238.134.126:8004"
-    type: http
-    server: 47.238.134.126
-    port: 8004
-  - name: "186.101.251.197:8080"
-    type: http
-    server: 186.101.251.197
-    port: 8080
-  - name: "175.158.63.166:1111"
-    type: http
-    server: 175.158.63.166
-    port: 1111
-  - name: "167.249.29.218:999"
-    type: http
-    server: 167.249.29.218
-    port: 999
-  - name: "47.109.83.196:8088"
-    type: http
-    server: 47.109.83.196
-    port: 8088
-  - name: "47.120.0.231:1311"
-    type: http
-    server: 47.120.0.231
-    port: 1311
-  - name: "39.102.209.128:6379"
-    type: http
-    server: 39.102.209.128
-    port: 6379
-  - name: "39.104.23.154:1212"
-    type: http
-    server: 39.104.23.154
-    port: 1212
-  - name: "47.91.89.3:1111"
-    type: http
-    server: 47.91.89.3
-    port: 1111
-  - name: "8.211.195.139:8008"
-    type: http
-    server: 8.211.195.139
-    port: 8008
-  - name: "8.215.12.103:8445"
-    type: http
-    server: 8.215.12.103
-    port: 8445
-  - name: "119.13.111.169:18081"
-    type: http
-    server: 119.13.111.169
-    port: 18081
-  - name: "47.104.198.111:1234"
-    type: http
-    server: 47.104.198.111
-    port: 1234
-  - name: "121.43.109.88:9080"
-    type: http
-    server: 121.43.109.88
+    server: 39.102.213.187
     port: 9080
-  - name: "47.105.122.72:8000"
+  - name: "103.161.69.252:2698"
     type: http
-    server: 47.105.122.72
-    port: 8000
-  - name: "8.221.141.88:5060"
+    server: 103.161.69.252
+    port: 2698
+  - name: "193.24.30.50:37777"
     type: http
-    server: 8.221.141.88
-    port: 5060
-  - name: "38.158.83.161:999"
+    server: 193.24.30.50
+    port: 37777
+  - name: "39.102.208.149:6666"
     type: http
-    server: 38.158.83.161
+    server: 39.102.208.149
+    port: 6666
+  - name: "47.91.120.190:104"
+    type: http
+    server: 47.91.120.190
+    port: 104
+  - name: "47.121.129.129:8443"
+    type: http
+    server: 47.121.129.129
+    port: 8443
+  - name: "47.251.73.54:1080"
+    type: http
+    server: 47.251.73.54
+    port: 1080
+  - name: "34.101.62.47:80"
+    type: http
+    server: 34.101.62.47
+    port: 80
+  - name: "186.5.94.216:999"
+    type: http
+    server: 186.5.94.216
     port: 999
-  - name: "47.107.142.198:50"
+  - name: "8.211.42.167:3333"
     type: http
-    server: 47.107.142.198
-    port: 50
-  - name: "47.119.164.33:100"
+    server: 8.211.42.167
+    port: 3333
+  - name: "47.238.130.212:9080"
     type: http
-    server: 47.119.164.33
+    server: 47.238.130.212
+    port: 9080
+  - name: "8.209.249.96:3128"
+    type: http
+    server: 8.209.249.96
+    port: 3128
+  - name: "45.157.177.22:80"
+    type: http
+    server: 45.157.177.22
+    port: 80
+  - name: "149.129.226.9:9090"
+    type: http
+    server: 149.129.226.9
+    port: 9090
+  - name: "39.104.89.111:8020"
+    type: http
+    server: 39.104.89.111
+    port: 8020
+  - name: "8.138.149.37:30001"
+    type: http
+    server: 8.138.149.37
+    port: 30001
+  - name: "45.56.71.129:1081"
+    type: http
+    server: 45.56.71.129
+    port: 1081
+  - name: "220.178.229.83:7302"
+    type: http
+    server: 220.178.229.83
+    port: 7302
+  - name: "8.220.204.92:100"
+    type: http
+    server: 8.220.204.92
     port: 100
+  - name: "47.238.130.212:8443"
+    type: http
+    server: 47.238.130.212
+    port: 8443
+  - name: "47.91.110.148:5060"
+    type: http
+    server: 47.91.110.148
+    port: 5060
+  - name: "147.139.164.26:8118"
+    type: http
+    server: 147.139.164.26
+    port: 8118
+  - name: "47.254.239.51:9091"
+    type: http
+    server: 47.254.239.51
+    port: 9091
+  - name: "8.213.222.157:88"
+    type: http
+    server: 8.213.222.157
+    port: 88
+  - name: "47.99.112.148:443"
+    type: http
+    server: 47.99.112.148
+    port: 443
+  - name: "8.138.131.110:9095"
+    type: http
+    server: 8.138.131.110
+    port: 9095
