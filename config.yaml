@@ -1,6 +1,6 @@
 # Clash Verge 配置 - dynfree.proxy.dev
-# 代理来源: proxy.scdn.io (GitHub Actions 每 6 小时更新)
-# 健康检查目标: https://www.gstatic.com/generate_204
+# 代理来源: proxy.scdn.io (GitHub Actions 每天 08:00/14:00/20:00 更新)
+# 混合 socks5 + http 代理，健康检查用 HTTP（兼容不支持 CONNECT 的 HTTP 代理）
 
 mixed-port: 7890
 allow-lan: false
@@ -24,7 +24,7 @@ sniffer:
     QUIC:
       ports: [443, 8443]
 
-# DNS: 系统_dns + 国内公共 UDP，公司内网环境下最稳
+# DNS
 dns:
   enable: true
   listen: 0.0.0.0:1053
@@ -35,17 +35,15 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
 
-# 代理集合 - 从 GitHub raw 拉取，每 6 小时自动刷新
-# proxy 字段: 通过代理组自身刷新订阅（防火墙环境下也能更新）
+# 代理集合 - 从 GitHub raw 拉取
 proxy-providers:
   proxy-pool:
     type: http
     url: "https://raw.githubusercontent.com/xRetia/dynfree.proxy.dev/main/proxies.yaml"
     interval: 21600
-    proxy: 代理选择
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: http://www.gstatic.com/generate_204
       interval: 300
       timeout: 5000
       lazy: true
@@ -57,7 +55,7 @@ proxy-groups:
     type: url-test
     use:
       - proxy-pool
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     timeout: 5000
@@ -72,11 +70,4 @@ proxy-groups:
 
 # 路由规则
 rules:
-  # 微信网页版走代理
-  - DOMAIN-SUFFIX,wx.qq.com,代理选择
-  - DOMAIN-SUFFIX,weixin.qq.com,代理选择
-  - DOMAIN-SUFFIX,qq.com,代理选择
-  # 钉钉相关域名直连（防火墙本身放行）
-  - DOMAIN-SUFFIX,dingtalk.com,DIRECT
-  # 其余直连
-  - MATCH,DIRECT
+  - MATCH,代理选择
