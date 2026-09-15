@@ -1,136 +1,136 @@
 proxies:
-  - name: "socks5-65.2.160.130:11178"
+  - name: "socks5-35.180.75.159:11011"
     type: socks5
-    server: 65.2.160.130
-    port: 11178
+    server: 35.180.75.159
+    port: 11011
     udp: true
-  - name: "socks5-43.203.146.136:42469"
+  - name: "socks5-18.142.95.213:21994"
     type: socks5
-    server: 43.203.146.136
-    port: 42469
+    server: 18.142.95.213
+    port: 21994
     udp: true
-  - name: "socks5-15.216.14.119:46736"
+  - name: "socks5-16.62.123.236:8260"
     type: socks5
-    server: 15.216.14.119
-    port: 46736
+    server: 16.62.123.236
+    port: 8260
     udp: true
-  - name: "socks5-35.183.127.162:5979"
+  - name: "socks5-43.199.29.225:12337"
     type: socks5
-    server: 35.183.127.162
-    port: 5979
+    server: 43.199.29.225
+    port: 12337
     udp: true
-  - name: "socks5-43.208.243.207:6615"
+  - name: "socks5-43.208.237.116:26634"
     type: socks5
-    server: 43.208.243.207
-    port: 6615
+    server: 43.208.237.116
+    port: 26634
     udp: true
-  - name: "socks5-52.77.229.98:58902"
+  - name: "socks5-16.28.101.55:41348"
     type: socks5
-    server: 52.77.229.98
-    port: 58902
+    server: 16.28.101.55
+    port: 41348
     udp: true
-  - name: "socks5-16.54.225.12:26999"
+  - name: "socks5-18.163.33.4:47977"
     type: socks5
-    server: 16.54.225.12
-    port: 26999
+    server: 18.163.33.4
+    port: 47977
     udp: true
-  - name: "socks5-16.26.208.68:20340"
+  - name: "socks5-13.60.181.61:49830"
     type: socks5
-    server: 16.26.208.68
-    port: 20340
+    server: 13.60.181.61
+    port: 49830
     udp: true
-  - name: "socks5-18.231.214.206:37245"
+  - name: "socks5-43.200.174.95:31759"
     type: socks5
-    server: 18.231.214.206
-    port: 37245
+    server: 43.200.174.95
+    port: 31759
     udp: true
-  - name: "socks5-16.208.77.160:44685"
+  - name: "socks5-47.245.165.201:1080"
     type: socks5
-    server: 16.208.77.160
-    port: 44685
+    server: 47.245.165.201
+    port: 1080
     udp: true
-  - name: "socks5-13.53.139.178:41296"
+  - name: "socks5-43.209.173.229:14015"
     type: socks5
-    server: 13.53.139.178
-    port: 41296
+    server: 43.209.173.229
+    port: 14015
     udp: true
-  - name: "socks5-51.17.130.167:47761"
+  - name: "socks5-34.246.183.20:14670"
     type: socks5
-    server: 51.17.130.167
-    port: 47761
+    server: 34.246.183.20
+    port: 14670
     udp: true
-  - name: "socks5-18.61.3.91:48192"
+  - name: "socks5-84.54.217.219:1080"
     type: socks5
-    server: 18.61.3.91
-    port: 48192
+    server: 84.54.217.219
+    port: 1080
     udp: true
-  - name: "socks5-174.138.162.37:36129"
+  - name: "socks5-56.155.73.159:35512"
     type: socks5
-    server: 174.138.162.37
-    port: 36129
+    server: 56.155.73.159
+    port: 35512
     udp: true
-  - name: "socks5-34.229.190.39:57950"
+  - name: "socks5-35.180.75.159:41609"
     type: socks5
-    server: 34.229.190.39
-    port: 57950
+    server: 35.180.75.159
+    port: 41609
     udp: true
-  - name: "http-111.119.162.248:10941"
+  - name: "http-47.112.19.200:3128"
     type: http
-    server: 111.119.162.248
-    port: 10941
-  - name: "http-8.130.74.114:8443"
+    server: 47.112.19.200
+    port: 3128
+  - name: "http-47.254.36.213:999"
+    type: http
+    server: 47.254.36.213
+    port: 999
+  - name: "http-106.15.58.163:3129"
+    type: http
+    server: 106.15.58.163
+    port: 3129
+  - name: "http-139.224.195.153:3129"
+    type: http
+    server: 139.224.195.153
+    port: 3129
+  - name: "http-39.102.210.222:34567"
+    type: http
+    server: 39.102.210.222
+    port: 34567
+  - name: "http-47.112.15.44:3128"
+    type: http
+    server: 47.112.15.44
+    port: 3128
+  - name: "http-8.213.134.213:3128"
+    type: http
+    server: 8.213.134.213
+    port: 3128
+  - name: "http-124.158.186.254:8080"
+    type: http
+    server: 124.158.186.254
+    port: 8080
+  - name: "http-47.106.198.144:3128"
+    type: http
+    server: 47.106.198.144
+    port: 3128
+  - name: "http-121.43.154.123:5060"
+    type: http
+    server: 121.43.154.123
+    port: 5060
+  - name: "http-139.224.186.221:9091"
+    type: http
+    server: 139.224.186.221
+    port: 9091
+  - name: "http-47.92.152.43:3128"
+    type: http
+    server: 47.92.152.43
+    port: 3128
+  - name: "http-47.74.46.81:11310"
+    type: http
+    server: 47.74.46.81
+    port: 11310
+  - name: "http-36.94.149.149:8090"
+    type: http
+    server: 36.94.149.149
+    port: 8090
+  - name: "http-8.130.74.114:9098"
     type: http
     server: 8.130.74.114
-    port: 8443
-  - name: "http-136.239.193.140:8080"
-    type: http
-    server: 136.239.193.140
-    port: 8080
-  - name: "http-180.191.235.172:8080"
-    type: http
-    server: 180.191.235.172
-    port: 8080
-  - name: "http-35.207.231.219:8899"
-    type: http
-    server: 35.207.231.219
-    port: 8899
-  - name: "http-165.22.201.59:3128"
-    type: http
-    server: 165.22.201.59
-    port: 3128
-  - name: "http-16.147.49.157:3128"
-    type: http
-    server: 16.147.49.157
-    port: 3128
-  - name: "http-43.216.195.95:54080"
-    type: http
-    server: 43.216.195.95
-    port: 54080
-  - name: "http-15.224.107.208:47979"
-    type: http
-    server: 15.224.107.208
-    port: 47979
-  - name: "http-3.122.224.70:19011"
-    type: http
-    server: 3.122.224.70
-    port: 19011
-  - name: "http-174.138.165.213:34117"
-    type: http
-    server: 174.138.165.213
-    port: 34117
-  - name: "http-16.26.208.68:56194"
-    type: http
-    server: 16.26.208.68
-    port: 56194
-  - name: "http-4.233.138.204:8888"
-    type: http
-    server: 4.233.138.204
-    port: 8888
-  - name: "http-174.138.165.204:36153"
-    type: http
-    server: 174.138.165.204
-    port: 36153
-  - name: "http-101.255.150.158:3125"
-    type: http
-    server: 101.255.150.158
-    port: 3125
+    port: 9098
